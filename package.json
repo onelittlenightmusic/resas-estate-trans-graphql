@@ -1,0 +1,32 @@
+{
+  "name": "resas-estate-trans-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL for RESAS estate transaction API",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --ext ts,yaml --exec 'ts-node' index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onelittlenightmusic/resas-estate-trans-graphql.git"
+  },
+  "author": "Hiroyuki OSAKI <hiroyuki.osaki@gmail.com> (https://github.com/onelittlenightmusic)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onelittlenightmusic/resas-estate-trans-graphql/issues"
+  },
+  "homepage": "https://github.com/onelittlenightmusic/resas-estate-trans-graphql#readme",
+  "dependencies": {
+    "@types/dotenv": "^4.0.3",
+    "@types/node-fetch": "^2.1.2",
+    "dotenv": "^6.1.0",
+    "graphql-yoga": "^1.16.2",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
+  }
+}
