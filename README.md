@@ -1,4 +1,4 @@
-# ----Title
+# resas-estate-trans-graphql
 GraphQL for RESAS estate transaction API
 
 RESAS APIで公開されている不動産価格のGraphQL API
@@ -14,7 +14,7 @@ Licence: cc-by
 
 ## API 
 
-https://opendata.resas-portal.go.jp/
+http://resas-estate-trans.now.sh
 
 - cityEstate(cityCode: "14150",
 		year: 2009,
