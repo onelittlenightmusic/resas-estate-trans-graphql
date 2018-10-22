@@ -30,19 +30,35 @@ const estate =  async (cityCode: string, year: Number, area: string) => {
 }
 
 async function run() {
-	const typeDefs = `
+  const typeDefs = `
+    # City estate value type (e.g. value)
     type CityEstate {
+      # Prefecture Code as String
       prefCode: String
+      # Prefecture name as String
       prefName: String
+      # City code as String
       cityCode: String
+      # City name as String
       cityName: String
+      # Display type as String defined orginally in RESAS
       displayType: String
+      # Estate transacation value
       value: String
+      # Estate transaction year
       year: Int
     }
     type Query {
-      cityEstate(cityCode: String!, year: Int, area: AreaType): CityEstate
+      # City estate value query/args: cityCode etc.
+      cityEstate(
+        # City code like "14150", 5 digits
+        cityCode: String!,
+        # Year number, only one year between 2009-2015 is allowed
+        year: Int,
+        # Area type (one from 5 types defined in AreaType enum)
+        area: AreaType): CityEstate
     }
+    # Enum type representing city type
     enum AreaType {
       # Commercial area
       Commercial
