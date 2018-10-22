@@ -26,3 +26,37 @@ Fields
 - value
 - year
 - prefName
+
+Example
+
+```
+{ cityEstate(cityCode: "14150",
+		year: 2009,
+    area: Housing) {
+    cityName
+    value
+    year
+    prefName
+  }
+}
+```
+
+Result
+
+```
+{
+  "data": {
+    "cityEstate": {
+      "cityName": "相模原市",
+      "value": "206431",
+      "year": 2009,
+      "prefName": "神奈川県"
+    }
+  },
+  "meta": {
+    "data_origin": "RESAS（地域経済分析システム）を加工して作成",
+    "source_url": "https://opendata.resas-portal.go.jp/",
+    "lisence_type": "cc-by https://opendata.resas-portal.go.jp/terms.html"
+  }
+}
+```
