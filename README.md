@@ -29,10 +29,11 @@ Fields
 
 Example
 
-```
-{ cityEstate(cityCode: "14150",
+```graphql
+{
+  cityEstate(cityCode: "14150",
 		year: 2009,
-    area: Housing) {
+        area: Housing) {
     cityName
     value
     year
@@ -43,7 +44,7 @@ Example
 
 Result
 
-```
+```json
 {
   "data": {
     "cityEstate": {
