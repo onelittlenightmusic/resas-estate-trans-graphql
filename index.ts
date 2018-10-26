@@ -1,7 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga'
 import fetch from 'node-fetch'
 import { config } from 'dotenv'
-import { exists } from 'fs';
 config()
 
 const API_URL = "https://opendata.resas-portal.go.jp/api/v1/townPlanning/estateTransaction/bar"
@@ -20,12 +19,10 @@ var download = async function(url: string) {
     return null
   }
   var response = await fetch(url, { headers: { 'x-api-key': API_KEY }});
-  var rtn = (await response.json())['result']
-  return rtn
+  return (await response.json())['result']
 }
 
 const estate =  async (cityCode: string, year: Number, area: string) => {
-  console.log(API_URL.substr(0,2))
   return await download(`${API_URL}?year=${year}&prefCode=${cityCode.substr(0,2)}&displayType=${AreaType[<any>area]}&cityCode=${cityCode}`)
 }
 
