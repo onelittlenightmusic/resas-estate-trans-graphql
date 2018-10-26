@@ -5,6 +5,7 @@ config()
 
 const API_URL = "https://opendata.resas-portal.go.jp/api/v1/townPlanning/estateTransaction/bar"
 const API_KEY = process.env.API_KEY
+const PORT = process.env.PORT
 
 enum AreaType {
   Commercial = 1,
@@ -92,7 +93,7 @@ async function run() {
     }
   }
 	const server = new GraphQLServer({ typeDefs, resolvers })
-	server.start({port: 4041, formatResponse}, () =>
+	server.start({port: PORT, formatResponse}, () =>
 		console.log(`Your GraphQL server is running now ...`),
 	)
 }
