@@ -14,7 +14,7 @@ Licence: cc-by
 
 ## API 
 
-http://resas-estate-trans.now.sh
+https://graphqlbin.com/v2/vokzFW
 
 - cityEstate(cityCode: "14150",
 		year: 2009,
